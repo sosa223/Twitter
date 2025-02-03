@@ -13,9 +13,9 @@ int main() {
     length = strlen(tweet);
 
     if (length > MAX_LENGTH) {
-        printf("Rejected\n");
+        printf("Rejected");
     } else {
-        printf("Posted\n");
+        printf("Posted");
     }
 
     return 0;
