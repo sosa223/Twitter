@@ -4,31 +4,18 @@
 #define MAX_LENGTH 140
 
 int main() {
-    char tweet[144];
+    char tweet[MAX_LENGTH + 4]; 
+    int length;
 
     printf("Enter your message: ");
-   
-    
-    fgets(tweet, sizeof(tweet), stdin); 
+    fgets(tweet, sizeof(tweet), stdin);
 
-    int length = strlen(tweet);
+    length = strlen(tweet);
 
-    if (tweet[length - 1] == '\n') {
-        tweet[length - 1] = '\0';
-        length--;
-    
-    
-    }
-
-   
-    
-    
-    if (length <= MAX_LENGTH) {
-        printf("Posted\n");
-   
-    
-    } else {
+    if (length > MAX_LENGTH) {
         printf("Rejected\n");
+    } else {
+        printf("Posted\n");
     }
 
     return 0;
